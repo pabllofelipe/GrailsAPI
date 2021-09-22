@@ -11,8 +11,4 @@ class StudentServiceSpec extends Specification implements ServiceUnitTest<Studen
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
-    }
 }

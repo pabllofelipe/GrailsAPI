@@ -9,6 +9,8 @@ class StudentController {
 
     def studentService
 
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+
     def index() {
         respond studentService.list()
     }

@@ -7,7 +7,12 @@ buildscript {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath "org.grails.plugins:views-gradle:1.2.9"
         classpath "org.grails.plugins:hibernate5:${gormVersion-".RELEASE"}"
+
     }
+}
+
+plugins {
+    id 'groovy'
 }
 
 version "0.1"
@@ -58,6 +63,8 @@ dependencies {
     testRuntime "org.seleniumhq.selenium:selenium-chrome-driver:2.47.1"
     testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
+    testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+    testImplementation 'org.codehaus.groovy:groovy-all:3.0.8'
 }
 
 bootRun {
