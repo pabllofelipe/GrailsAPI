@@ -18,7 +18,7 @@
     </ul>
 </div>
 <div id="show-student" class="content scaffold-show" role="main">
-    <f:display bean="student" />
+    <display bean="student" />
     <g:form resource="${this.student}" method="DELETE">
         <fieldset class="buttons">
             <input class="delete" type="submit" value="delete" />

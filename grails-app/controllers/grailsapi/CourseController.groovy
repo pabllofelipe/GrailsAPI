@@ -3,32 +3,34 @@ package grailsapi
 
 import grails.rest.*
 import grails.converters.*
+import grails.validation.ValidationException
+import static org.springframework.http.HttpStatus.*
 
-class StudentController {
+class CourseController {
 	static responseFormats = ['json', 'xml']
-    def studentService
+    def courseService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index() {
-        respond studentService.list()
+        respond courseService.list()
     }
 
     def show(Long id) {
-        respond studentService.get(id)
+        respond courseService.get(id)
     }
 
     def create() {
-        respond new Student(params)
+        respond new Course(params)
     }
 
-    def save(Student student) {
-        studentService.save(student)
+    def save(Course course) {
+        courseService.save(course)
         redirect action:"index", method:"GET"
     }
 
     def delete(Long id) {
-        studentService.delete(id)
+        courseService.delete(id)
         redirect action:"index", method:"GET"
     }
 }

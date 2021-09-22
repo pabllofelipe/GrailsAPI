@@ -17,7 +17,7 @@
     </ul>
 </div>
 <div id="list-student" class="content scaffold-list" role="main">
-    <f:table collection="${studentList}"
+    <table collection="${studentList}"
              properties="['firstName', 'lastName']" />
 </div>
 </body>
