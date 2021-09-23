@@ -16,7 +16,7 @@ class CourseService {
     }
 
     def save(course){
-        Course.save()
+        course.save()
     }
 
     def delete(id){

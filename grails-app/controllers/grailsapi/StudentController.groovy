@@ -23,7 +23,7 @@ class StudentController {
     }
 
     def save(Student student) {
-        studentService.save(student)
+        def debug = studentService.save(student)
         redirect action:"index", method:"GET"
     }
 
